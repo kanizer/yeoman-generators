@@ -1,0 +1,7 @@
+.DS_Store
+**/assets/img/
+**/assets/vid/
+**/bower_components
+**/node_modules
+**/.ftppass
+**/.aws

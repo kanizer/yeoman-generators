@@ -1,0 +1,5 @@
+{
+	"ftpPassword": "Original06",
+	"rsaPath": "/Users/nelsonshin/.ssh/id_rsa",
+	"ftpUsername": "deploy"
+}

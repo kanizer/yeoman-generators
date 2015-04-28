@@ -1,0 +1,6 @@
+{
+    "deploy"        : "deploy/",
+    "dist"          : "",
+    "stage"         : "[STAGE_PATH_TO_AD]",
+    "adId"          : "[AD_ID]"
+}
