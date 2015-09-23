@@ -1,0 +1,16 @@
+node_modules/
+build/
+npm-debug.log
+*.swp
+.DS_Store
+
+### Intellij ###
+*.iml
+
+## Directory-based project format:
+.idea/
+
+## Dev files:
+src/dist/
+src/public/js/bundle.js
+src/public/tests/public/bundle.spec.js
