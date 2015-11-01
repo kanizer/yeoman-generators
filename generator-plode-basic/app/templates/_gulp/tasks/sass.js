@@ -1,8 +1,8 @@
 var gulp         = require('gulp');
-var browserSync  = require('browser-sync');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync  = require('browser-sync');
 var handleErrors = require('../util/handleErrors');
 var config       = require('../config').sass;
 
