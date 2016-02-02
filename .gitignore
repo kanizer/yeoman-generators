@@ -2,3 +2,4 @@ node_modules/
 temp/
 generator-adcade/
 generator-adcade-sandbox/
+npm-debug.log
