@@ -2,6 +2,12 @@
 
 {{PROJ_DESC}}
 
+#### Setup - assuming you have node 4.x.x, npm and gulp-cli globally installed.
+
+```
+npm i
+```
+
 #### Run tests
 
 Run any unit/integration tests.

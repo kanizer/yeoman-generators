@@ -1,5 +1,5 @@
 /*eslint-disable */
-var dest = './src/dist';
+var dest = './src/dest';
 var src = './src';
 var test = './src/public/tests';
 /*eslint-enable */
@@ -36,7 +36,7 @@ module.exports = {
         srcFont: src + '/public/css/fonts/*.{eot,ttf,woff,woff2,svg}',
         dest: dest,
         destImg: dest + '/img',
-        destFont: dest + '/img'
+        destFont: dest + '/css/fonts'
     },
     images: {
         src: src + '/public/img/**.{jpg,png,gif}',
@@ -57,7 +57,8 @@ module.exports = {
         src: 'tests/public/bundle.spec.js'
     },
     lint: {
-        src: src + '/public/js/src/**/*.js'
+        src: [src + '/public/js/**/*.js', '!' + src + '/public/js/bundle.js'],
+        conf: src + '/public/js/.eslintrc' // this prop is optional - defaults to the same conf in this case
     },
     markup: {
         src: src + '/public/*.html',
@@ -79,8 +80,7 @@ module.exports = {
     production: {
         cssHtml: src + '/public/index.html',
         cssSrc: [
-            src + '/public/css/main.css',
-            src + '/public/css/webfont.css'
+            src + '/public/css/main.css'
         ],
         bundleSrc: src + '/public/js/bundle.js',
         jsSrc: src + '/public/js/*.js',

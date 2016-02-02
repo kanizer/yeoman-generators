@@ -1,21 +1,28 @@
 /* global ------------------------------------------*/
 
-body {
-  font-family: $reg;
-  font-size: 12px;
-  font-weight: normal;
-  letter-spacing: 0.07em;
-  color: #677889;
-}
-
 html, body {
   height: 100%;
   margin: 0;
   padding: 0
 }
 
+body {
+  @include font-primary-reg;
+  font-size: 12px;
+  background: $color-bg-global;
+  color: $color-font-global;
+}
+
+noscript,
+.chromeframe {
+  color: $color-font-noscript;
+  display: block;
+  margin: 40px 40px 0;
+  text-align: center;
+}
+
 a {
-  color: #337ab7;
+  color: $color-link-global;
   text-decoration: none;
   &:hover {
     cursor: pointer;
@@ -23,30 +30,19 @@ a {
   }
 }
 
+.no-js,
+.lt-ie9 {
+  .root {
+    display: none;
+  }
+}
+
 .root {
+  height: 100%;
+
+}
+
+.wrapper {
+  display: block;
   min-height: 100%;
-  position: relative;
-  display: block;
-}
-
-.content {
-  display: block;
-  margin: 0 auto;
-  padding-top: $headerH;
-  padding-bottom: $footerH;
-}
-
-.push {
-  height: 8em;
-  display: inline-block;
-}
-
-.center {
-  margin: 0 auto;
-  display: block;
-  float: none;
-}
-
-.btn-wrapper {
-  display: inline-block;
 }

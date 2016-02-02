@@ -1,7 +1,65 @@
 /*mixins ------------------------------------------*/
 
+//////////////////////////////////
+// Fonts
+//////////////////////////////////
+@mixin font-primary {
+  font-family: 'Proxima Nova Regular', Helvetica, Arial, sans-serif;
+}
+
+@mixin font-primary-reg {
+  @include font-primary;
+  font-weight: 200;
+  letter-spacing: 0.07em;
+}
+
+
+//////////////////////////////////
+// effects
+//////////////////////////////////
+@mixin shadow ($xoffset: 0, $yoffset: 0, $blur: 25px, $spread: 0, $opac: .5) {
+  box-shadow: $xoffset $yoffset $blur $spread rgba(0, 0, 0, $opac);
+  transition: box-shadow .3s ease-out;
+}
+
+@mixin opac($val) {
+  opacity: $val;
+  filter: alpha(opacity = $val * 100);
+}
+
 @mixin rounded($radius: 0.5em) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
   border-radius: $radius;
+}
+
+
+//////////////////////////////////
+// animation
+//////////////////////////////////
+@mixin trans($dur: .1s, $del: 0) {
+  transition: all $dur ease-out;
+  transition-delay: $del;
+}
+
+
+//////////////////////////////////
+// media queries
+//////////////////////////////////
+@mixin viewport($size: small) {
+  $selected-break: $size;
+
+  @if $size == medium {
+    $selected-break: $break-tablet;
+  }
+
+  @if $size == minitablet {
+    $selected-break: $break-mini-tablet;
+  }
+
+  @if $size == small {
+    $selected-break: $break-phone;
+  }
+
+  @media only screen and (max-width: $selected-break) {
+    @content;
+  }
 }
